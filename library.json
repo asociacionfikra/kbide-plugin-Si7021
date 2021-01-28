@@ -1,0 +1,17 @@
+{
+  "name" : "kbide-plugin-si7021",
+  "title": "Si7021",
+  "keywords": "ide, esp32, ultrasonic",
+  "category":"",
+  "description": "Si7021 Plugin for KB-IDE",
+  "git": "https://github.com/asociacionfikra/kbide-plugin-si7021",
+  "author": "Islam",
+  "email": "",
+  "url": "https://www.fikra.es/",
+  "version": "1.0.0",
+  "board" : "",
+  "platform": ["arduino-esp32"],
+  "license": "",
+  "image" : "/static/display.png",
+  "homepage": "https://www.fikra.es/"
+}
