@@ -6,17 +6,15 @@ Blockly.JavaScript["si_begin"] = function (block) {
   var code =
 `
 #EXTINC
-#include "Adafruit_Si7021.h" 
+#include "SparkFun_Si7021_Breakout_Library.h"
+#include <Wire.h>
 #END
 
 #VARIABLE
-Adafruit_Si7021 ${variable_instance} = Adafruit_Si7021();
+Weather ${variable_instance};
 #END
 
-if (!${variable_instance}.begin()) {
-  Serial.println("Could not find a valid Si7021 sensor, check wiring!");
-  while (1);
-}
+${variable_instance}.begin();
 
 \n
 `;
@@ -27,12 +25,12 @@ if (!${variable_instance}.begin()) {
 
 Blockly.JavaScript['si_get_temperature'] = function (block) {
   var variable_instance = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('instance'), Blockly.Variables.NAME_TYPE);
-  var code=`${variable_instance}.readTemperature()`;
+  var code=`${variable_instance}.getTemp()`;
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
 Blockly.JavaScript['si_get_humidity'] = function (block) {
   var variable_instance = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('instance'), Blockly.Variables.NAME_TYPE);
-  var code=`${variable_instance}.readHumidity()`;
+  var code=`${variable_instance}.getRH()`;
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
