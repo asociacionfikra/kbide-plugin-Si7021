@@ -8,7 +8,7 @@
   "author": "Islam",
   "email": "",
   "url": "https://www.fikra.es/",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "board" : "",
   "platform": ["arduino-esp32"],
   "license": "",
