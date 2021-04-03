@@ -1,1 +1,1 @@
-# Si7021 library for KB-IDE
+# SparkFun Si7021 library for KB-IDE
